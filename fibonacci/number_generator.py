@@ -23,15 +23,15 @@ def generate_number(data,number):
 
     else:
         nth = 0
-        while saved_number != number + 1:
-            temp = second_number
-            temp1 = first_number
-            first_number = temp - first_number
-            second_number = temp1
+        if number == saved_number-1:
             nth = first_number
-
-            saved_number = saved_number - 1
-            print(nth)
+        else:
+            while saved_number != number+1:
+                temp = first_number
+                first_number = second_number-first_number
+                second_number = temp
+                nth = first_number
+                saved_number = saved_number - 1
         result = nth
     return result,bin_data
 
