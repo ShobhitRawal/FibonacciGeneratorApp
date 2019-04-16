@@ -56,7 +56,6 @@ class Fibonacci(views.APIView):
                         result = first_number
                     else:
                         while count < number:
-                            print('while')
                             nth = first_number+second_number
                             first_number = second_number
                             second_number = nth
